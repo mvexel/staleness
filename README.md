@@ -15,15 +15,17 @@ Steps to get your Staleness page up
 
 ## Generate age files
 
-1. Now sneak some shapefiles out of there that we will use to feed the WMS:
-        `$  /usr/lib/postgresql/9.1/bin/pgsql2shp -u osm -f amsterdam_nodes.shp osm "SELECT geom, floor(extract(epoch from age(tstamp))/60/60/24) AS age FROM nodes WHERE akeys(tags) <> '{}'"
-        $  /usr/lib/postgresql/9.1/bin/pgsql2shp -u osm -f amsterdam_ways.shp osm "SELECT linestring, floor(extract(epoch from age(tstamp))/60/60/24) AS age FROM ways WHERE NOT tags?'building'"`
-        Yes, you could have Geoserver talk directly to the database too. Go ahead and set it up that way, smartass.
+Now sneak some shapefiles out of there that we will use to feed the WMS:
+
+`$  /usr/lib/postgresql/9.1/bin/pgsql2shp -u osm -f amsterdam_nodes.shp osm "SELECT geom, floor(extract(epoch from age(tstamp))/60/60/24) AS age FROM nodes WHERE akeys(tags) <> '{}'"
+$  /usr/lib/postgresql/9.1/bin/pgsql2shp -u osm -f amsterdam_ways.shp osm "SELECT linestring, floor(extract(epoch from age(tstamp))/60/60/24) AS age FROM ways WHERE NOT tags?'building'"`
+
+(Yes, you could have Geoserver talk directly to the database too. Go ahead and set it up that way, smartass.)
 
 ## Geoserver setup
 
-1. Styles -> Add New Style -> Browse... -> select osm_age_nodes.sld -> OK -> Upload... -> Submit
-1. Repeat for osm_age_ways.sld
+1. Styles -> Add New Style -> Browse... -> select `osm_age_nodes.sld` -> OK -> Upload... -> Submit
+1. Repeat for `osm_age_ways.sld`
 1. Stores -> Add New Store -> Directory of spatial files (shapefiles)
 
 <img src="screenshots/GeoServer New Vector Data Source - Mozilla Firefox_2012-07-03_17-45-31.png" type="image/png" height="597" width="448"/>
