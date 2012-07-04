@@ -28,10 +28,10 @@ $  /usr/lib/postgresql/9.1/bin/pgsql2shp -u osm -f amsterdam_ways.shp osm "SELEC
 1. Repeat for `osm_age_ways.sld`
 1. Stores -> Add New Store -> Directory of spatial files (shapefiles)
 
-<img src="screenshots/GeoServer New Vector Data Source - Mozilla Firefox_2012-07-03_17-45-31.png" type="image/png" height="597" width="448"/>
+        <img src="screenshots/GeoServer New Vector Data Source - Mozilla Firefox_2012-07-03_17-45-31.png" type="image/png" height="597" width="448"/>
 
 1. Save.
-1. Layers -> Add New Layer... -> Select staleness_amsterdam 
+1. Layers -> Add New Layer... -> Select `staleness_amsterdam` 
 
 <img src="screenshots/GeoServer New Layer - Mozilla Firefox_2012-07-03_17-50-02.png" type="image/png" height="324" width="748"/>
 
@@ -46,7 +46,7 @@ For both layers:
 
 1. Note the Native Bounding Box extents, we'll need them later in the OpenLayers config.
 1. Now click the 'Publishing' tab near the top.
-1. Choose the 'osm_age_nodes' / 'osm_age_ways' style as the default style for the WMS service:
+1. Choose the `osm_age_nodes` / `osm_age_ways` style as the default style for the WMS service:
 
 <img src="screenshots/GeoServer Edit Layer - Mozilla Firefox_2012-07-03_17-51-00.png" type="image/png" height="225" width="345"/>
 
@@ -67,4 +67,4 @@ Open index.html in a text editor. Three things to edit here.
 	`var metroname = "Amsterdam";`
 	and change to your region name.
 Save.
-Load index.html in your web browser and enjoy.
+Load `index.html` in your web browser and enjoy.
