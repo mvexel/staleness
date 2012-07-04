@@ -11,19 +11,7 @@ Steps to get your Staleness page up
 1. Create a PostGIS database 
 1. Read the data into your fresh database:
 
-`osmosis --rb /osm/planet/amsterdam.osm.pbf --wp database=osm user=osm password=osm` (replace db name and credentials with your own)
-`Jul 3, 2012 5:28:47 PM org.openstreetmap.osmosis.core.Osmosis run
-INFO: Osmosis Version 0.40.1
-Jul 3, 2012 5:28:47 PM org.openstreetmap.osmosis.core.Osmosis run
-INFO: Preparing pipeline.
-Jul 3, 2012 5:28:47 PM org.openstreetmap.osmosis.core.Osmosis run
-INFO: Launching pipeline execution.
-Jul 3, 2012 5:28:47 PM org.openstreetmap.osmosis.core.Osmosis run
-INFO: Pipeline executing, waiting for completion.
-Jul 3, 2012 5:33:12 PM org.openstreetmap.osmosis.core.Osmosis run
-INFO: Pipeline complete.
-Jul 3, 2012 5:33:12 PM org.openstreetmap.osmosis.core.Osmosis run
-INFO: Total execution time: 265172 milliseconds.`
+  `osmosis --rb /osm/planet/amsterdam.osm.pbf --wp database=osm user=osm password=osm` (replace db name and credentials with your own)
 
 ## Generate age files
 
