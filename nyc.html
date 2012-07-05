@@ -116,11 +116,10 @@
         map.addControl(new OpenLayers.Control.Navigation());
         map.addControl(new OpenLayers.Control.Scale($('scale')));
         map.addControl(new OpenLayers.Control.Attribution());
-        map.zoomToExtent(bounds);
-        map.zoomToScale(40000,true);
         var title = 'OpenStreetMap ' + metroname + ' data staleness';
         document.getElementById('title').innerHTML = title;
         document.title = title;
+        map.setCenter([-8235000,4942000], 4);
     }
     </script>
   </head>
